@@ -28,7 +28,7 @@ print("########## Problem 13, Planting Grapevines ##########\n")
 row_length = float(input("Enter the length of the row in feet: "))
 endpost_space = float(input("Enter the amount of space, in feet, used by an end-post assembly: "))
 vine_space = float(input("Enter the space between vines in feet: "))
-num_grapevines = (row_length - (2 * endpost_space)) / vine_space
+num_grapevines = (row_length - (2 * endpost_space)) // vine_space
 print(f"The number of grapevines that will fit in the row are: {num_grapevines:,.2f}\n")
 
 ########## Problem 14, Compound Interest ##########
@@ -39,4 +39,4 @@ rate = rate/100
 compound = float(input("Enter the times per year compounded: "))
 age = float(input("Enter the number of years that the account will earn interest: "))
 total_amount = principal * (1 + (rate/compound)) ** (compound * age)
-print(f"The amount of money that will be in the account after {age} year(s) is: ${total_amount:,.2f}\n")
+print(f"The amount of money that will be in the account after {age:,.2f} year(s) is: ${total_amount:,.2f}\n")
